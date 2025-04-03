@@ -1,0 +1,15 @@
+# Bug report "Generator hasła"
+
+# Poprawny kod w python:
+
+import random
+
+lower = "abcdefghijklmnopqrstuvwxyz"
+upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numbers = "0123456789"
+symbols = "[]{}()*;/,._-"
+all_chars = lower + upper + numbers + symbols  # Poprawiona zmienna 'all'
+
+length = 16
+password = "".join(random.sample(all_chars, length))  # Poprawiona funkcja 'random.sample'
+print(password)
